@@ -1,0 +1,4 @@
+pytest
+polars
+matplotlib
+pandas
