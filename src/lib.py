@@ -10,7 +10,7 @@ HISTOGRAM_IMAGE_FILE = "wine_rating.png"  # Specify the histogram image file nam
 def get_loadanddrop():
     df = pl.read_csv(CSV_URL)
     df.drop_in_place('grape')
-    return df.head()
+    return df()
 
 def get_stats():
     df = get_loadanddrop()
@@ -41,7 +41,7 @@ def get_stddev_rating():
 
 def save_rating_histogram():
     # Read the CSV data into a Polars DataFrame
-    df = get_loadanddrop()
+    df = pl.read_csv(CSV_URL)
     
     # Plot the histogram of the 'rating' column
     plt.hist(df['rating'].to_list(), bins=20, edgecolor='k')
