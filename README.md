@@ -1,7 +1,10 @@
-![Run Tests](https://github.com/tommymmcguire/IndividProj1/workflows/Build%20and%20Test/badge.svg)
-![Format Code](https://github.com/tommymmcguire/IndividProj1/workflows/Format%20Code/badge.svg)
-![Lint Code](https://github.com/tommymmcguire/IndividProj1/workflows/Lint%20Code/badge.svg)
-![Install Dependencies](https://github.com/tommymmcguire/IndividProj1/workflows/Install%20Dependencies/badge.svg)
+
+[![CI](https://github.com/tommymmcguire/IndividProj1/actions/workflows/python.yml/badge.svg)](https://github.com/tommymmcguire/IndividProj1/actions/workflows/python.yml)
+
+[![Install](https://github.com/tommymmcguire/IndividProj1/actions/workflows/install.yml/badge.svg)](https://github.com/tommymmcguire/IndividProj1/actions/workflows/install.yml)
+[![Lint](https://github.com/tommymmcguire/IndividProj1/actions/workflows/lint.yml/badge.svg)](https://github.com/tommymmcguire/IndividProj1/actions/workflows/lint.yml)
+[![Format](https://github.com/tommymmcguire/IndividProj1/actions/workflows/format.yml/badge.svg)](https://github.com/tommymmcguire/IndividProj1/actions/workflows/format.yml)
+[![Test](https://github.com/tommymmcguire/IndividProj1/actions/workflows/test.yml/badge.svg)](https://github.com/tommymmcguire/IndividProj1/actions/workflows/test.yml)
 
 # This project uses a python template and the Pandas library to perform descriptive statistics for IDS 706. 
 ## In this project I created a function that counted the number of wine ratings (rows) and tested it with a function in test_main.py to assert that the data was correct. Then I calculated the average, median, and standard deviation of the rating of the wines. I added these statistics to a Markdown file named output.md. Finally, I designed a histogram to show the distribution of wine ratings, which is saved as wine_rating.png. 
