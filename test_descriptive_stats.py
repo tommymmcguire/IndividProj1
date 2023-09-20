@@ -2,7 +2,7 @@ import sys
 
 sys.path.append("/workspaces/IndividProj1")
 sys.path.append("/workspaces/IndividProj1/src")
-from src.descriptivestats import (
+from descriptivestats import (
     get_ratingcountav,
     get_med,
     get_stddev,
@@ -31,20 +31,17 @@ def test_stddev():
 
 
 def test_markdown_generation():
-    # Calculate the path to the 'descriptivestats.py' script in the 'src' directory
-    script_path = os.path.join("..", "src", "descriptivestats.py")
+    # Specify the name of the script file you want to work with
+    script_filename = "descriptivestats.py"
 
-    # Determine the path to the 'output' directory relative to the test file
-    test_file_dir = os.path.dirname(os.path.abspath(__file__))
-    output_dir = os.path.join(test_file_dir, "..", "output")
-
-    # Calculate the path to the generated Markdown file in the 'output' directory
-    generated_file_path = os.path.join(output_dir, "summary_stats.md")
+    # Specify the name of the generated Markdown file
+    generated_file_path = "output/summary_stats.md"
 
     # Check if the file exists
+    assert os.path.exists(script_filename), f"File not found: {script_filename}"
     assert os.path.exists(
         generated_file_path
-    ), f"Markdown file not found at {generated_file_path}"
+    ), f"Markdown file not found: {generated_file_path}"
 
     # Read the file content
     with open(generated_file_path, "r", encoding="utf-8") as f:

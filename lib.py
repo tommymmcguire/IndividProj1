@@ -4,7 +4,7 @@ import matplotlib.pyplot as plt
 
 CSV_URL = "https://raw.githubusercontent.com/paiml/wine-ratings/main/wine-ratings.csv"
 OUTPUT_FILE = "output.md"  # Specify the Markdown file name
-OUTPUT_FOLDER = os.path.join(os.path.dirname(__file__), "..", "output")
+OUTPUT_FOLDER = "output"
 
 
 def get_loadanddrop():
