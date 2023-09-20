@@ -1,33 +1,9 @@
-import sys
-
-sys.path.append("/workspaces/IndividProj1")
-sys.path.append("/workspaces/IndividProj1/src")
 from lib import (
     get_ratingcount_avg,
     get_median_rating,
     get_stddev_rating,
-    write_stats_to_mkdwn,
 )
 import os
-
-
-def test_ratecount():
-    # Test the count_rating function
-    r_count, r_sum, r_avg = get_ratingcount_avg()
-    assert int(r_count) == 32780
-    assert int(r_sum) == 2989097
-    assert int(r_avg) == 91
-
-
-def test_median_r():
-    median_r = get_median_rating()
-    assert int(median_r) == 91
-
-
-def test_stddev_r():
-    stddeviation_r = get_stddev_rating()
-    assert int(stddeviation_r) == 2
-
 
 def test_markdown_gen():
     # Specify the name of the file you want to work with
@@ -48,3 +24,21 @@ def test_markdown_gen():
 
     # Perform assertions on the file content
     assert content != "", "Markdown file is empty"
+
+
+def test_ratecount():
+    # Test the count_rating function
+    r_count, r_sum, r_avg = get_ratingcount_avg()
+    assert int(r_count) == 32780
+    assert int(r_sum) == 2989097
+    assert int(r_avg) == 91
+
+
+def test_median_r():
+    median_r = get_median_rating()
+    assert int(median_r) == 91
+
+
+def test_stddev_r():
+    stddeviation_r = get_stddev_rating()
+    assert int(stddeviation_r) == 2
