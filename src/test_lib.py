@@ -1,27 +1,37 @@
 import sys
+
 sys.path.append("/workspaces/IndividProj1")
 sys.path.append("/workspaces/IndividProj1/src")
-from src.descriptivestats import get_ratingcountav, get_med, get_stddev, gen_mkdwn, generate_ratings_histogram
+from src.lib import (
+    get_ratingcount_avg,
+    get_median_rating,
+    get_stddev_rating,
+    write_stats_to_mkdwn,
+)
 import os
 
-def test_count():
+
+def test_ratecount():
     # Test the count_rating function
-    rat_count, rat_sum, rat_avg = get_ratingcountav()
-    assert int(rat_count) == 32780
-    assert int(rat_sum) == 2989097
-    assert int(rat_avg) == 91
+    r_count, r_sum, r_avg = get_ratingcount_avg()
+    assert int(r_count) == 32780
+    assert int(r_sum) == 2989097
+    assert int(r_avg) == 91
 
-def test_med():
-    med_r = get_med()
-    assert int(med_r) == 91
 
-def test_stddev():
-    stdev_r = get_stddev()
-    assert int(stdev_r) == 2
+def test_median_r():
+    median_r = get_median_rating()
+    assert int(median_r) == 91
 
-def test_markdown_generation():
+
+def test_stddev_r():
+    stddeviation_r = get_stddev_rating()
+    assert int(stddeviation_r) == 2
+
+
+def test_markdown_gen():
     # Calculate the path to the 'descriptivestats.py' script in the 'src' directory
-    script_path = os.path.join("..", "src", "descriptivestats.py")
+    script_path = os.path.join("..", "src", "lib.py")
 
     # Determine the path to the 'output' directory relative to the test file
     test_file_dir = os.path.dirname(os.path.abspath(__file__))
@@ -31,7 +41,9 @@ def test_markdown_generation():
     generated_file_path = os.path.join(output_dir, "summary_stats.md")
 
     # Check if the file exists
-    assert os.path.exists(generated_file_path), f"Markdown file not found at {generated_file_path}"
+    assert os.path.exists(
+        generated_file_path
+    ), f"Markdown file not found at {generated_file_path}"
 
     # Read the file content
     with open(generated_file_path, "r", encoding="utf-8") as f:
