@@ -5,6 +5,7 @@ from descriptivestats import (
 )
 import os
 
+
 def test_markdown_generation():
     # Specify the name of the script file you want to work with
     script_filename = "descriptivestats.py"

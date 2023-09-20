@@ -5,6 +5,7 @@ from lib import (
 )
 import os
 
+
 def test_markdown_gen():
     # Specify the name of the file you want to work with
     script_filename = "lib.py"
