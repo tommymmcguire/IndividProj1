@@ -1,17 +1,20 @@
+
 install:
 	pip install --upgrade pip &&\
 		pip install -r requirements.txt
 
 test:
-	python -m pytest --nbval src/*.ipynb
-	python -m pytest -vv --cov=src.lib
+	pytest -vv --cov=src
+	pytest --nbval src/*.ipynb
 
 format:	
 	black src/*.py
-	nbqa black src/*.ipynb 
 
 lint:
-	nbqa ruff src/*.ipynb
 	ruff check src/*.py
-		
-all: install lint test format
+	nbqa ruff src/*.ipynb
+
+all: install lint format test
+
+summary:
+	python src/descriptive_stats.py

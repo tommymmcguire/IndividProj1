@@ -8,3 +8,5 @@ Median of rating is: 91.0
 
 Standard deviation of rating is: 2.1903911198052723
 
+
+![Histogram](file:///workspaces/IndividProj1/src/../output/wine_rating.png)
