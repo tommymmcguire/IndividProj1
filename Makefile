@@ -4,17 +4,14 @@ install:
 		pip install -r requirements.txt
 
 test:
-	pytest -vv --cov=src
-	pytest --nbval src/*.ipynb
+	python -m pytest --nbval src/*.ipynb
+	python -m pytest -vv --cov=src.lib
 
 format:	
-	black src/*.py
+	black src/*.py 
 
 lint:
 	ruff check src/*.py
 	nbqa ruff src/*.ipynb
-
-all: install lint format test
-
-summary:
-	python src/descriptive_stats.py
+		
+all: install lint test format
