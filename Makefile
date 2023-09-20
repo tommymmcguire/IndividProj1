@@ -4,7 +4,7 @@ install:
 
 test:
 	python -m pytest --nbval 
-	python -m pytest -vv --cov=src.lib
+	python -m pytest -vv --cov
 
 format:	
 	black *.py
