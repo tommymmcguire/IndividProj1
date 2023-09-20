@@ -11,9 +11,40 @@
 
 
 ---
+**About**
 
-# This project uses a python template and the Pandas library to perform descriptive statistics for IDS 706. 
-## In this project I created a function that counted the number of wine ratings (rows) and tested it with a function in test_main.py to assert that the data was correct. Then I calculated the average, median, and standard deviation of the rating of the wines. I added these statistics to a Markdown file named output.md. Finally, I designed a histogram to show the distribution of wine ratings, which is saved as wine_rating.png. 
+This project serves as a practical example of how to implement Continuous Integration (CI) using GitHub Actions in Python-based Data Science projects. This will contribute to the upkeep of code quality and uniformity during the development cycle through automation. The workflows, which encompass tasks like lint, format, install, and test, ensure that these essential processes are triggered each time code changes are pushed or pull requests are made to the repository. This ultimately leads to faster and more reliable software delivery.
+
+---
+
+**Details**
+
+This project uses the Python libraries ruff, black, and polars to ensure code quality, consistency, and efficient data manipulation.
+
+--- 
+
+**Files**
+
+  - descriptivestats.py
+      - Performs descriptive statistics using Polars
+   
+  - descriptivestats.ipynb
+      - Jupyter notebook that performs the same descriptive statistics
+
+  - lib.py
+      - Shares the common code between the script and the notebook
+
+  - Makefile
+      - Install: install dependencies
+      - Test: runs tests
+      - Format: formats the code using black
+      - Lint: lints the code using ruff
+      - All: performs all
+   
+  - Workflows (.github/
+   
+    
+
 
 * Visualization of the distribution of wine ratings
   
