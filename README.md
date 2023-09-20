@@ -41,20 +41,28 @@ This project uses the Python libraries ruff, black, and polars to ensure code qu
       - Lint: lints the code using ruff
       - All: performs all
    
-  - Workflows (.github/
+  - Workflows (.github/workflows): used to automate various aspects of the software development lifecycle, including building, testing, and 
+    deploying code.
+      - format.yml
+      - install.yml
+      - lint.yml
+      - python.yml
+      - test.yml
+
+  - requirements.txt
+      - All of the dependencies to be installed
+
+`make install` to install, `make lint` to lint, `make format` to format, `make test` to perform tests
    
-    
+--- 
 
-
-* Visualization of the distribution of wine ratings
+### Visualization of the distribution of wine ratings
+Also found in (output/wine_rating.png)
   
 ![wine_rating](https://github.com/tommymmcguire/pandasdescript/assets/141086024/4703fd7b-7e56-4b55-8adb-4fea7237eea1)
 
-* Descriptive Statistics
+### Descriptive Statistics
+Also found in (output/summary_stats.md)
 
 <img width="998" alt="Screen Shot 2023-09-14 at 10 10 26 AM" src="https://github.com/tommymmcguire/polarsdescript/assets/141086024/6db5f72d-5ff2-48c2-9263-60e3cf5ffc59">
 
-
-* Test Results
-
-<img width="1093" alt="Screen Shot 2023-09-11 at 2 22 37 PM" src="https://github.com/tommymmcguire/pandasdescript/assets/141086024/b328eb2f-d33e-43e8-976b-5747714cd163">
